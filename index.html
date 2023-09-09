@@ -1,100 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wilujeung sumping di Ningali Film</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  </head>
-  <body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Ningali Film</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Halaman Utami</a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Jenis Film </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#" onclick="showAlert()">Aksi</a></li>
-                <li><a class="dropdown-item" href="#" onclick="showAlert()">Horor</a></li>
-                <li><a class="dropdown-item" href="#" onclick="showAlert()">Romantis</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Pilari Film" aria-label="Search" />
-            <button class="btn btn-outline-light" type="submit" onclick="showAlert()">Search</button>
-          </form>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ningali Film</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Halaman Utami</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Jenis Film </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="showAlert('Aksi')">Aksi</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="showAlert('Horor')">Horor</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="showAlert('Romantis')">Romantis</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Pilari Film" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit" onclick="showAlert('Search')">Search</button>
+                </form>
+            </div>
         </div>
-      </div>
     </nav>
     <div class="container">
-      <h1>Action</h1>
-      <div class="row">
-        <div class="col-md-3 col-6 mb-4">
-          <div class="card fs-6">
-            <img src="fastx.jpg" class="card-img-top" />
-            <div class="card-body">
-              <h5 class="card-title" align="center">Fast X</h5>
-              <p class="card-text">
-                Direktur : Louis Leterrier 
-                Penulis : Dan Mazeau, Justin Lin, Zach Dean
-                Bintang : Vin Diesel, Michelle Rodriguez, Jason Statham</p>
-              <a href="https://tutwuri.id/OhgBytq" class="btn btn-success">Tonton</a>
-              <a href="https://drive.google.com/file/d/1EXUKWuLbhOymDQxlgMdf94alUzkDAAiy/view?usp=drivesdk" class="btn btn-primary">Download</a>
-              <a href="https://www.youtube.com/watch?v=eoOaKN4qCKw" class="btn btn-danger">Trailer</a>
-            </div>
-          </div>
+        <h1>Action</h1>
+        <div class="row" id="actionCards">
+            <!-- Tampilkan kartu action disini -->
         </div>
-      </div>
     </div>
     <div class="container">
-      <h1>Horor</h1>
-      <div class="row">
-        <div class="col-md-3 col-6 mb-4">
-          <div class="card fs-6">
-            <img src="nun.jpg" class="card-img-top" />
-            <div class="card-body">
-              <h5 class="card-title" align="center">The Nun</h5>
-              <p class="card-text">
-                Direktur : Corin Hardy 
-                Penulis : Gary Dauberman, James Wan 
-                Bintang : Demián Bichir, Taissa Farmiga, Jonas Bloquet</p>
-              <a href="https://tutwuri.id/KJm0Ssvvr8fz" class="btn btn-success">Tonton</a>
-              <a href="https://drive.google.com/file/d/1DUJOXbLJ8GreHo_fsxMwkMCS4xZJpoEH/view?usp=drivesdk" class="btn btn-primary">Download</a>
-              <a href="https://youtu.be/pzD9zGcUNrw?si=K-d2JR2QXsRjgPyU" class="btn btn-danger">Trailer</a>
-            </div>
-          </div>
+        <h1>Horor</h1>
+        <div class="row" id="horrorCards">
+            <!-- Tampilkan kartu horor disini -->
         </div>
-        <div class="col-md-3 col-6 mb-4">
-          <div class="card fs-6">
-            <img src="annabelle.jpg" class="card-img-top" />
-            <div class="card-body">
-              <h5 class="card-title" align="center">Annabelle</h5>
-              <p class="card-text">
-                Direktur : John R. Leonetti 
-                Penulis : Gary Dauberman 
-                Bintang : Ward Horton, Annabelle Wallis, Alfre Woodart</p>
-              <a href="https://tutwuri.id/PSquKey5BE" class="btn btn-success">Tonton</a>
-              <a href="https://drive.google.com/file/d/1--RvOkBTO4lRTlGW8-I7Frb8OAMOcVz8/view?usp=drivesdk" class="btn btn-primary">Download</a>
-              <a href="https://youtu.be/paFgQNPGlsg?si=YDCG30VNc8ijkENW" class="btn btn-danger">Trailer</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <script>
-      function showAlert() {
-        alert("Nuju dikembangkeun keneh...!!");
-      }
+        // Fungsi untuk menampilkan alert
+        function showAlert(category) {
+            alert("Anda memilih kategori: " + category);
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+    <script src="data.js"></script>
+    <script>
+        // Panggil fungsi untuk mengisi kartu-kartu ke dalam dokumen
+        populateCards(actionData, "actionCards");
+        populateCards(horrorData, "horrorCards");
+
+        // Fungsi untuk mengisi kartu-kartu dari data ke dalam elemen dengan id tertentu
+        function populateCards(data, containerId) {
+            const container = document.getElementById(containerId);
+            data.forEach(item => {
+                const cardDiv = document.createElement("div");
+                cardDiv.classList.add("col-md-3", "col-6", "mb-4");
+                cardDiv.innerHTML = `
+                    <div class="card fs-6">
+                        <img src="${item.image}" class="card-img-top" alt="${item.title}">
+                        <div class="card-body">
+                            <h5 class="card-title" align="center">${item.title}</h5>
+                            <p class="card-text">
+                                Direktur: ${item.director}<br>
+                                Penulis: ${item.writer}<br>
+                                Bintang: ${item.stars}
+                            </p>
+                            <a href="${item.watch}" class="btn btn-success">Tonton</a>
+                            <a href="${item.download}" class="btn btn-primary">Download</a>
+                            <a href="${item.trailer}" class="btn btn-danger">Trailer</a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(cardDiv);
+            });
+        }
+    </script>
+</body>
 </html>
